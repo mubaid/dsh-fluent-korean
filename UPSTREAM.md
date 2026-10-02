@@ -25,7 +25,7 @@ those landed and why.
 | `.claude-plugin/plugin.json` | 530 B | `package.json` | rewritten | Upstream declares a Claude Code plugin manifest. Ours is an npm manifest plus a `dsh` block (`engines.dsh`, and the fact that there is no build step to run). Metadata that still applies — name, version, description, author, repository, license, keywords — is carried over. |
 | `.claude-plugin/marketplace.json` | 506 B | — | dropped | A Claude Code marketplace index for a plugin that no longer exists in that form. DSH has its own plugin market and install path; a stale index for a different harness is worse than none. |
 | `README.md` | 14135 B | `README.md`, `README.en.md`, `NOTICE` | rewritten | Upstream's README is Claude Code documentation: `/plugin marketplace add`, `/config`, `~/.claude/output-styles/`, and installation advice addressed to Claude itself. None of that applies here. It was read for the feature description and for its section structure, then rewritten for DSH. Korean is the default README because it is this plugin's first language. The optional add-on clauses are carried over as quoted Korean rather than restated. |
-| `LICENSE` | 1067 B | `LICENSE` | verbatim | MIT, `Copyright (c) 2026 snflkd`. Reproduced exactly, with a comment header above it identifying this as a port and crediting the original author, as MIT requires. |
+| `LICENSE` | 1067 B | `LICENSE` | verbatim | MIT. The upstream grant text is reproduced unchanged; the port author's copyright line is added below `snflkd`'s, and no comment header precedes the text, so that license detection resolves the file as MIT. The port identification moved to `NOTICE`. |
 
 ## Our five documentation deliverables
 
@@ -36,7 +36,7 @@ and the port needs a record of itself.
 | --- | --- | --- |
 | `README.md` | rewritten | The Korean README, and the default one on the repository. Upstream is written in Korean, so this is the natural primary document rather than a translation. |
 | `README.en.md` | rewritten | The English README. Written as a complete document, not a summary of the Korean one. |
-| `LICENSE` | verbatim (+ header) | Upstream MIT text, unchanged, with a port-identification header. |
+| `LICENSE` | verbatim (+ copyright line) | Upstream MIT grant text, unchanged, with the port author's copyright line added under the original author's. |
 | `NOTICE` | rewritten | Attribution required by the MIT grant, plus a statement of what the port added and what it did not. |
 | `VERIFICATION.md` | rewritten | What was actually run, and what was not. Split out of the README so the README can stay a product description. |
 | `UPSTREAM.md` | rewritten | This file. |

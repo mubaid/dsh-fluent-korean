@@ -11,6 +11,13 @@ This package is a port of an existing, separately licensed project.
 | Upstream license | MIT |
 | Port target | DeepSeek Harness (DSH) |
 
+## The license file
+
+`LICENSE` holds the MIT License text and nothing else, so that GitHub and other
+tooling detect it as MIT. It carries two copyright lines: `snflkd` for the
+Korean prose reproduced from upstream, and `mubaid` for the port work described
+below. This NOTICE is where the identification of the package as a port lives.
+
 ## What was carried over
 
 The substance of the upstream plugin is Korean prose: two output-style guidance
