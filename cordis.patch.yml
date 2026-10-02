@@ -1,0 +1,20 @@
+# dsh-fluent-korean — Korean output styles for DeepSeek Harness.
+#
+# Adds one system-prompt section with Korean prose that asks the model for clear,
+# natural Korean sentences. Port of the Claude Code output-style plugin
+# snflkd/fluent-korean.
+#
+# `style` accepts one of the two ids:
+#   fluent-korean             Korean prose, coding guidance kept (default)
+#   fluent-korean-not-coding  Korean prose, coding guidance dropped
+#
+# Both keys are volatile, so both appear in Settings → Plugins and can be changed
+# there while DSH is running. Note that a row's `config` REPLACES the entry's
+# entire config rather than deep-merging into it, so this block restates every
+# key it wants set — here, that is the complete set.
+- insert:
+    - id: fluent-korean
+      name: dsh-fluent-korean
+      config:
+        enabled: true
+        style: fluent-korean

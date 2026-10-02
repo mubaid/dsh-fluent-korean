@@ -1,0 +1,17 @@
+# Installed dependencies. The plugin ships prebuilt plain JavaScript, so nothing
+# here is needed at install time by a consumer — only to run the test suite
+# against the real @deepseek-ai/schemastery.
+node_modules/
+
+# npm's local cache, used because a read-only global cache is common in CI images.
+.npmcache/
+
+# Editor and OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*

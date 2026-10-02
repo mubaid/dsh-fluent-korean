@@ -1,0 +1,52 @@
+# NOTICE for dsh-fluent-korean
+
+## Upstream attribution
+
+This package is a port of an existing, separately licensed project.
+
+| | |
+| --- | --- |
+| Upstream project | [`snflkd/fluent-korean`](https://github.com/snflkd/fluent-korean) |
+| Original author | snflkd — <https://github.com/snflkd> |
+| Upstream license | MIT |
+| Port target | DeepSeek Harness (DSH) |
+
+## What was carried over
+
+The substance of the upstream plugin is Korean prose: two output-style guidance
+documents under `plugins/fluent-korean/output-styles/`. Those two documents are
+reproduced in this package, byte-identical to their upstream counterparts except
+for the YAML front-matter at the top of each file. The Korean text was **not**
+translated, edited, summarised, or reworded. That is deliberate — it is the
+product, and a translation of it would defeat its purpose.
+
+Because that prose is a substantial portion of the upstream work, it is
+redistributed under the upstream MIT License, and the original copyright notice
+is retained verbatim in the `LICENSE` file in this package. The MIT License
+requires that the copyright notice and permission notice travel with all copies
+and substantial portions; they do.
+
+## What this package adds
+
+Everything that is not upstream Korean prose — the DSH plugin entry point, the
+configuration schema, the Settings surface, the README files, and this NOTICE —
+is original work for this port. It is distributed under the same MIT License,
+whose text is reproduced at the bottom of `LICENSE`.
+
+## Style differences
+
+The upstream documents carry a Claude Code-specific front-matter key,
+`keep-coding-instructions`, which controls whether Claude Code's built-in coding
+instructions are dropped. DSH has no equivalent mechanism, and this port does
+not attempt to fake one. See the "Known limitation" section of `README.md` for
+what that means in practice. This port does not modify the prose to compensate;
+it changes only the front-matter.
+
+## No affiliation
+
+This package is not authored, endorsed, reviewed, or maintained by snflkd or by
+Anthropic. It is an independent downstream port. Bug reports about this port
+belong in this package's issue tracker, not upstream's.
+
+Upstream is credited here because the MIT License requires attribution, and
+because snflkd deserves the credit.

@@ -1,0 +1,59 @@
+{
+  "name": "dsh-fluent-korean",
+  "version": "0.1.0",
+  "description": "Korean output styles for DeepSeek Harness: a port of the snflkd/fluent-korean Claude Code output-style plugin, switchable in Settings.",
+  "type": "module",
+  "author": "mubaid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mubaid/dsh-fluent-korean.git"
+  },
+  "homepage": "https://github.com/mubaid/dsh-fluent-korean#readme",
+  "bugs": {
+    "url": "https://github.com/mubaid/dsh-fluent-korean/issues"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "lib/",
+    "styles/"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "korean",
+    "한국어",
+    "output-style",
+    "localization"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": "0.2.0-rc.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    }
+  }
+}
